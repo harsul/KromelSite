@@ -1,0 +1,44 @@
+﻿@model KromelSite.Models.UrunGruplari
+@*@{
+        ViewData["Title"] = "Details";
+    }*@
+
+<!-- Page Content -->
+<div class="page-heading header-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Ürün Portoföyümüz</h1>
+                <h2>Kromel olarak her biri alanında uzman ekibimizle,<br /> çözüm odaklı çalışmalarla her zaman en iyiyi hedefliyoruz.</h2>
+            </div>
+        </div>
+    </div>
+</div>
+<div>
+    <h4>UrunGruplari</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Baslik)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Baslik)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Tanim)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Tanim)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ResimYolu)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ResimYolu)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

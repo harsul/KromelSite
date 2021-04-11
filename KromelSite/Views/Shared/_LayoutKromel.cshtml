@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Kromel Makina A.S</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/stylekromel.css" />
+    <link rel="stylesheet" href="~/css/fontawesome.css" />
+</head>
+
+<body>
+    <!--Preloader -->
+    <div id="preloader">
+        <div class="jumper">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <div class="sub-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-xs-12">
+                    <ul class="left-info">
+                        @*<li><a href="https://www.google.com/maps/place/Kromel+Makina/@40.7163855,30.3880984,13.75z/data=!4m4!3m3!1s0x0:0x8b16d3985e582941!11m1!2e1" target="_blank"><i class="fa fa-map-marker"></i>Sakarya, Turkey</a></li>*@
+                        <li><a href="mailto:kromel@kromel.com.tr" target="_blank"><i class="fa fa-envelope"></i>kromel@kromel.com.tr</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <ul class="right-icons">
+                        <li><a href="https://www.youtube.com/channel/UCs9moRIRQmcke96bzvTWNHg" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a rel="nofollow" href="https://www.facebook.com/kromelmakine/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/kromelmakine"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://tr.linkedin.com/company/kromel-mak.-san.-ve-tic.-a.%C5%9F."><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <header class="">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="~/uploads/main-pictures/logo.png" width="150" height="45" class="d-inline-block align-top" alt="Kromel Logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index"> Ana Sayfa
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="UrunGruplari" asp-action="Index">Urunler</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hizmetler">Hizmetler</a>
+                        </li>  
+                        <li class="nav-item">
+                            <a class="nav-link" href="#arge">Ar-Ge</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">KromHaber</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Iletisim">Iletişim</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 footer-item">
+                    <h4>Kromel Makina A.Ş.</h4>
+                    <p>Kalitenin başladığı yer.</p>
+                    <ul class="social-icons">
+                        <li><a href="https://www.youtube.com/channel/UCs9moRIRQmcke96bzvTWNHg" target="_blank"><i class="fa fa-youtube-play"></i></a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=+90555555555&text=Call%20us" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
+                        <li><a rel="nofollow" href="https://www.facebook.com/kromelmakine/" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/kromelmakine"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://tr.linkedin.com/company/kromel-mak.-san.-ve-tic.-a.%C5%9F."><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item">
+                    <h4>Sayfalar</h4>
+                    <ul class="menu-list">
+                        <li><a href="#">Ürünler</a></li>
+                        <li><a href="#">Referanslar</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 footer-item last-item">
+                    <h4>Contact Us</h4>
+                    <div class="contact-form">
+                        <ul class="menu-list">
+                            <li><a href="#">Müşteri Memnuniyet Anketi</a></li>
+                            <li><a href="#">Ön Teklif/Talep Formu</a></li>
+                            <li><a href="#">Öneri & Şikayet Formut</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="sub-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p>
+                        Copyright &copy; 2021 Kromel Makina A.Ş.
+
+                        - Design: <a rel="nofollow noopener" href="https://ba.linkedin.com/in/harun-suljagic-477914201" target="_blank">HS</a>
+                        <div class="container">
+                            &copy; 2021 - KromelSite - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                        </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/js/accordions.js" asp-append-version="true"></script>
+    <script src="~/js/custom.js" asp-append-version="true"></script>
+    <script src="~/js/jquery.singlePageNav.min.js" asp-append-version="true"></script>
+    <script src="~/js/owl.js" asp-append-version="true"></script>
+    <script src="~/js/slick.js" asp-append-version="true"></script>
+    <script src="~/js/writer.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

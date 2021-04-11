@@ -1,0 +1,41 @@
+﻿@model IEnumerable<KromelSite.Models.UrunGruplari>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- Page Content -->
+<div class="page-heading header-text">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Ürün Grupları</h1>
+                <h2>Kromel olarak her biri alanında uzman ekibimizle,<br /> çözüm odaklı çalışmalarla her zaman en iyiyi hedefliyoruz.</h2>
+
+                <span>We have over 40 years of experience</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--Urunler-->
+<div class="container" style=" background-color: rgba(250,250,250,0.1);" id="urunler">
+    @*<div class="section-heading">
+        <h1>Ürün <em>Portoföyümüz</em></h1>
+        <h2>Kromel olarak her biri alanında uzman ekibimizle,<br /> çözüm odaklı çalışmalarla her zaman en iyiyi hedefliyoruz.</h2>
+    </div>*@
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4 col-sm-6">
+                <div class="box1">
+                    <img src="@item.ResimYolu" alt="@item.Tanim">
+                    <a asp-action="Details" asp-route-id="@item.Id"><h3 class="title">@item.Baslik</h3></a>
+                    <ul class="icon">
+                        <li><a asp-controller="Makina" asp-action="GrupDetails" asp-route-id="@item.Id"><i class="fa fa-search"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        }
+    </div>
+</div>
